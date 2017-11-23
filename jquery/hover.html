@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>鼠标悬停切换</title>
+   <script src="../libs/jquery.js"></script>
+</head>
+<body>
+<div id="p1">客官来嘛</div>
+</body>
+</html>
+<script>
+   $().ready(function () {
+      $("#p1").hover(
+              function(){
+                 alert("哎哟喂，客官可把你给盼来了，姑娘们等你好久了！")},
+              function(){
+                 alert("哎，客官别走啊！")}
+      )
+   })
+</script>

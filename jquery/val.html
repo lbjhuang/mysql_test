@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>val()获取输入的值</title>
+   <script src="../libs/jquery.js"></script>
+</head>
+<body>
+<form>
+   姓名：<input id="name"/>
+</form>
+<button id="btn1">val()获取输入的值</button>
+</body>
+</html>
+<script>
+   $().ready(function () {
+      $("#btn1").click(function () {
+         alert("输入的值是："+$("input").val())
+      })
+   })
+//   $().ready(function () {
+//      $("#btn1").click(function () {
+//         $("#name").val('这个很不错')  //设置输入框的值
+//      })
+//   })
+</script>

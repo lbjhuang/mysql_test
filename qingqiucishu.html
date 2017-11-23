@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>请求次数统计</title>
+</head>
+<body>
+<span id="tg"></span>
+</body>
+</html>
+<script language="javascript">
+    function window_onload()
+    {
+        if(window.name==""){
+            window.name = "0";
+        }
+        else{
+            window.name = eval(window.name) + 1;
+            var id =document.getElementById("tg");
+
+            id.innerHTML = window.name;
+        }
+    }
+    window_onload();
+</script>
+

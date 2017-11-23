@@ -1,0 +1,2 @@
+//分组条件筛选（统计每一个title的数量并用group_concat把所有id和title组合选出来）
+SELECT COUNT(title) AS title_num, GROUP_CONCAT(CONCAT_WS(':',cate_id,title) SEPARATOR ', ') AS id_title, pid from im_category where create_time >= 1510052491 GROUP BY pid;

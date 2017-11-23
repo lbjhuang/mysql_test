@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>获取焦点和失去焦点事件</title>
+   <script src="../libs/jquery.js"></script>
+</head>
+<body>
+<p>显示和隐藏我请点击对应按钮哈</p>
+<button id="hide">隐藏</button>
+<button id="show">显示</button>
+</body>
+</html>
+<script>
+$().ready(function () {
+   //括号内后面数字可以调节速度
+   $('#hide').click(function () {
+      $("p").hide(500)
+   });
+   $("#show").click(function () {
+      $("p").show(200)
+   })
+})
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>获取焦点和失去焦点事件</title>
+   <script src="../libs/jquery.js"></script>
+</head>
+<body>
+<form>
+   姓名:<input type="text" name="input1"/>
+   身份证：<input type="text" name="input2"/>
+</form>
+
+</body>
+</html>
+<script>
+   $().ready(function () {
+      //获取焦点和失去焦点分别改变输入框背景色
+      $("input").focus(function () {
+         $(this).css("background-color", '#F1DDF9')
+      });
+      $("input").blur(function () {
+         $(this).css("background-color", '#FDFCFE')
+      })
+   })
+</script>

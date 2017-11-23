@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<?php
+date_default_timezone_set('Asia/Hong_Kong');
+$startTime = '09:00:00';
+$endTime = '18:00:00';
+//将时间转换成时间戳
+$stime = strtotime($startTime);
+$etime = strtotime($endTime);
+$total = $etime - $stime;
+$remain = $etime - time();
+//休息时间1.5小时
+$work = ($total - 1.5*3600)/3600;
+$h = floor($remain/3600);
+$i = ceil(($remain - floor($remain/3600)*3600)/60);
+?>
+<span><?php echo $work;?></span>
+</body>
+</html>
+<script language="JavaScript">
+function myrefresh()
+{
+       window.location.reload();
+}
+setTimeout('myrefresh()',1000); //指定1秒刷新一次
+</script>

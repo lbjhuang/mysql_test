@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>text和html的区别</title>
+   <script src="../libs/jquery.js"></script>
+</head>
+<body>
+<p>这是一个好<strong>东西</strong></p>
+<!--<button id="btn1">弹出text获取的信息</button>-->
+<button id="btn1">设置p里面的值</button>
+<button id="btn2">弹出$('p').html()方式获取的信息</button>
+</body>
+</html>
+<script>
+   //html会把元素内的html标签也获取出来，text只是获取p元素的内容,text()既可以获取值又可以设置值
+   $().ready(function () {
+      $("#btn1").click(function () {
+         //alert($("p").text())
+         $("p").text('你喜欢画画吗？')
+      })
+      $("#btn2").click(function () {
+         alert($("p").html())
+      })
+   })
+</script>

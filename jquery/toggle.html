@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>获取焦点和失去焦点事件</title>
+   <script src="../libs/jquery.js"></script>
+</head>
+<body>
+<p>显示和隐藏我请都点我哈</p>
+<button id="tog">切换显示和隐藏</button>
+</body>
+</html>
+<script>
+$().ready(function () {
+  //直接切换显示和隐藏
+   $("#tog").click(function(){
+      $("p").toggle(300)
+   })
+})
+</script>
