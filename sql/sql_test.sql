@@ -77,7 +77,7 @@ SELECT goods_id, cat_id, shop_price, goods_name FROM im_goods WHERE cat_id = 3 A
 SELECT goods_id, cat_id, shop_price, goods_name FROM im_goods WHERE shop_price > 100 AND click_count > 1 AND goods_name LIKE "诺基亚%";
 SELECT goods_id, cat_id, shop_price, goods_name FROM im_goods WHERE shop_price > 100 AND click_count > 1 AND goods_name LIKE "_星%";
 
-//满足价格在1000以上，点击数大于10的条件下，根据价格排序，根据分类id分组，并且组合记录字段，根据价格排序。
+//满足价格在1000以上，点击数大于10的条件下，根据价格排序，根据分类id分组，并且组合记录字段，里面再次根据价格排序。
 SELECT cat_id,
 GROUP_CONCAT(CONCAT_WS('-----', goods_name, shop_price, click_count) ORDER BY shop_price DESC) AS named,
 MAX(shop_price) AS max_price,
@@ -96,3 +96,55 @@ SELECT CONCAT('HTC', SUBSTRING(goods_name, 4)) FROM im_goods WHERE goods_name LI
 
 //把商品价格保留与价格最近10位的数字，如115修改成110，3584改成3580
 SELECT goods_name, shop_price, FLOOR(shop_price/10)*10 AS price FROM im_goods;
+
+//统计所有分类下的商品的总价格
+SELECT cat_id, AVG(shop_price) AS avarage_price , SUM(goods_number) AS total_num, MAX(shop_price) AS max_price, MIN(shop_price) AS min_price, SUM(shop_price*goods_number) AS total_price FROM im_goods GROUP BY cat_id ORDER BY cat_id;
+
+///售价比市场价省200以上的(HAVING 和 WHERE 区别)
+//HAVING 是针对计算出来的结果集的基础上再做操作，WHERE 是针对数据表里面的字段进行操作
+SELECT goods_id, shop_price, market_price, (market_price - shop_price) AS sheng from im_goods HAVING sheng > 200;
+
+
+DROP TABLE IF EXISTS `im_result`;
+CREATE TABLE `im_result` (
+  `name` varchar(20) DEFAULT NULL,
+  `subject` varchar(20) DEFAULT NULL,
+  `score` tinyint(4) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of im_result
+-- ----------------------------
+INSERT INTO `im_result` VALUES ('张三', '语文', '68');
+INSERT INTO `im_result` VALUES ('张三', '数学', '66');
+INSERT INTO `im_result` VALUES ('张三', '英语', '36');
+INSERT INTO `im_result` VALUES ('李四', '语文', '90');
+INSERT INTO `im_result` VALUES ('李四', '数学', '58');
+INSERT INTO `im_result` VALUES ('李四', '英语', '40');
+INSERT INTO `im_result` VALUES ('王五', '语文', '90');
+INSERT INTO `im_result` VALUES ('王五', '数学', '69');
+INSERT INTO `im_result` VALUES ('王五', '英语', '38');
+INSERT INTO `im_result` VALUES ('赵六', '语文', '78');
+INSERT INTO `im_result` VALUES ('赵六', '数学', '50');
+INSERT INTO `im_result` VALUES ('赵六', '英语', '40');
+
+//sum 和 count 的区别： 计算有2门以上不及格的学生的不及格次数和平均分
+SELECT name, SUM(score < 60) AS score_num, AVG(score) AS avg_score FROM im_result GROUP BY name HAVING score_num >= 2;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
