@@ -77,7 +77,7 @@ SELECT goods_id, cat_id, shop_price, goods_name FROM im_goods WHERE cat_id = 3 A
 SELECT goods_id, cat_id, shop_price, goods_name FROM im_goods WHERE shop_price > 100 AND click_count > 1 AND goods_name LIKE "诺基亚%";
 SELECT goods_id, cat_id, shop_price, goods_name FROM im_goods WHERE shop_price > 100 AND click_count > 1 AND goods_name LIKE "_星%";
 
-//再满足价格在100以上，点击数大于10的条件下，根据价格排序，根据分类id分组，并且组合记录字段，根据价格排序。
+//满足价格在1000以上，点击数大于10的条件下，根据价格排序，根据分类id分组，并且组合记录字段，根据价格排序。
 SELECT cat_id,
 GROUP_CONCAT(CONCAT_WS('-----', goods_name, shop_price, click_count) ORDER BY shop_price DESC) AS named,
 MAX(shop_price) AS max_price,
@@ -90,3 +90,9 @@ SELECT goods_id, cat_id, goods_name, shop_price FROM im_goods WHERE cat_id NOT I
 
 SELECT goods_id, cat_id, goods_name, shop_price FROM im_goods WHERE (shop_price > 1000 AND shop_price < 3000) OR (shop_price > 4000 AND shop_price < 5000);
 SELECT goods_id, cat_id, goods_name, shop_price FROM im_goods WHERE (shop_price BETWEEN 1000 AND  3000) OR (shop_price BETWEEN 4000 AND 5000);
+
+//把诺基亚开头商品名字替换成HTC
+SELECT CONCAT('HTC', SUBSTRING(goods_name, 4)) FROM im_goods WHERE goods_name LIKE "诺基亚%";
+
+//把商品价格保留与价格最近10位的数字，如115修改成110，3584改成3580
+SELECT goods_name, shop_price, FLOOR(shop_price/10)*10 AS price FROM im_goods;
