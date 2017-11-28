@@ -104,6 +104,11 @@ SELECT cat_id, AVG(shop_price) AS avarage_price , SUM(goods_number) AS total_num
 //HAVING 是针对计算出来的结果集的基础上再做操作，WHERE 是针对数据表里面的字段进行操作
 SELECT goods_id, shop_price, market_price, (market_price - shop_price) AS sheng from im_goods HAVING sheng > 200;
 
+//子查询,取出每个分类最新商品（用order by 更耗资源）
+select cat_id, goods_id, goods_name from im_goods where goods_id in (select MAX(goods_id) from im_goods GROUP BY cat_id)
+SELECT * from (SELECT goods_id, goods_name, cat_id from im_goods order by goods_id DESC) as t GROUP BY cat_id
+
+
 
 DROP TABLE IF EXISTS `im_result`;
 CREATE TABLE `im_result` (
