@@ -1,12 +1,16 @@
-
 CREATE TABLE `im_category` (
-  `cate_id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(32) NOT NULL DEFAULT '' COMMENT '标题',
-  `pid` int(11) DEFAULT '0' COMMENT '父级id',
-  `create_time` int(11) DEFAULT '0',
+  `cate_id`     INT(11)     NOT NULL AUTO_INCREMENT,
+  `title`       VARCHAR(32) NOT NULL DEFAULT ''
+  COMMENT '标题',
+  `pid`         INT(11)              DEFAULT '0'
+  COMMENT '父级id',
+  `create_time` INT(11)              DEFAULT '0',
   PRIMARY KEY (`cate_id`),
   KEY `key_pid` (`pid`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+)
+  ENGINE = InnoDB
+  AUTO_INCREMENT = 11
+  DEFAULT CHARSET = utf8;
 
 -- ----------------------------
 -- Records of im_category
@@ -20,22 +24,31 @@ INSERT INTO `im_category` VALUES ('7', '酷派', '2', '1510072826');
 INSERT INTO `im_category` VALUES ('8', '服装', '0', '1510107152');
 INSERT INTO `im_category` VALUES ('9', '宠物', '0', '1510199888');
 INSERT INTO `im_category` VALUES ('10', '狗狗', '9', '1510199904');
-//分组条件筛选（统计每一个title的数量并用group_concat把所有id和title组合选出来）
-SELECT COUNT(title) AS title_num, GROUP_CONCAT(CONCAT_WS(':',cate_id,title) SEPARATOR ', ') AS id_title, pid from im_category where create_time >= 1510052491 GROUP BY pid;
+#分组条件筛选（统计每一个title的数量并用group_concat把所有id和title组合选出来）
+SELECT
+  COUNT(title)                                                AS title_num,
+  GROUP_CONCAT(CONCAT_WS(':', cate_id, title) SEPARATOR ', ') AS id_title,
+  pid
+FROM im_category
+WHERE create_time >= 1510052491
+GROUP BY pid;
 
 
 CREATE TABLE `im_goods` (
-  `goods_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
-  `goods_name` varchar(120) NOT NULL DEFAULT '',
-  `cat_id` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `brand_id` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `goods_sn` char(15) NOT NULL DEFAULT '',
-  `goods_number` smallint(5) unsigned NOT NULL DEFAULT '0',
-  `shop_price` decimal(10,2) unsigned NOT NULL DEFAULT '0.00',
-  `market_price` decimal(10,2) unsigned NOT NULL DEFAULT '0.00',
-  `click_count` int(10) unsigned NOT NULL DEFAULT '0',
+  `goods_id`     MEDIUMINT(8) UNSIGNED   NOT NULL AUTO_INCREMENT,
+  `goods_name`   VARCHAR(120)            NOT NULL DEFAULT '',
+  `cat_id`       SMALLINT(5) UNSIGNED    NOT NULL DEFAULT '0',
+  `brand_id`     SMALLINT(5) UNSIGNED    NOT NULL DEFAULT '0',
+  `goods_sn`     CHAR(15)                NOT NULL DEFAULT '',
+  `goods_number` SMALLINT(5) UNSIGNED    NOT NULL DEFAULT '0',
+  `shop_price`   DECIMAL(10, 2) UNSIGNED NOT NULL DEFAULT '0.00',
+  `market_price` DECIMAL(10, 2) UNSIGNED NOT NULL DEFAULT '0.00',
+  `click_count`  INT(10) UNSIGNED        NOT NULL DEFAULT '0',
   PRIMARY KEY (`goods_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
+)
+  ENGINE = MyISAM
+  AUTO_INCREMENT = 33
+  DEFAULT CHARSET = utf8;
 
 -- ----------------------------
 -- Records of im_goods
@@ -72,50 +85,131 @@ INSERT INTO `im_goods` VALUES ('30', '移动20元充值卡', '14', '0', 'ecs0000
 INSERT INTO `im_goods` VALUES ('31', '摩托罗拉e8 ', '3', '2', 'ecs000031', '1', '1337.00', '1604.39', '5');
 INSERT INTO `im_goods` VALUES ('32', '诺基亚n85', '3', '1', 'ecs000032', '4', '3010.00', '3612.00', '9');
 
-SELECT goods_id, cat_id, shop_price, goods_name FROM im_goods WHERE cat_id = 3 AND (shop_price > 1000 OR shop_price > 3000) AND click_count > 10;
-SELECT goods_id, cat_id, shop_price, goods_name FROM im_goods WHERE cat_id = 3 AND (shop_price BETWEEN 1000 AND 3000) AND click_count > 10;
-SELECT goods_id, cat_id, shop_price, goods_name FROM im_goods WHERE shop_price > 100 AND click_count > 1 AND goods_name LIKE "诺基亚%";
-SELECT goods_id, cat_id, shop_price, goods_name FROM im_goods WHERE shop_price > 100 AND click_count > 1 AND goods_name LIKE "_星%";
+SELECT
+  goods_id,
+  cat_id,
+  shop_price,
+  goods_name
+FROM im_goods
+WHERE cat_id = 3 AND (shop_price > 1000 OR shop_price > 3000) AND click_count > 10;
+SELECT
+  goods_id,
+  cat_id,
+  shop_price,
+  goods_name
+FROM im_goods
+WHERE cat_id = 3 AND (shop_price BETWEEN 1000 AND 3000) AND click_count > 10;
+SELECT
+  goods_id,
+  cat_id,
+  shop_price,
+  goods_name
+FROM im_goods
+WHERE shop_price > 100 AND click_count > 1 AND goods_name LIKE "诺基亚%";
+SELECT
+  goods_id,
+  cat_id,
+  shop_price,
+  goods_name
+FROM im_goods
+WHERE shop_price > 100 AND click_count > 1 AND goods_name LIKE "_星%";
 
-//满足价格在1000以上，点击数大于10的条件下，根据价格排序，根据分类id分组，并且组合记录字段，里面再次根据价格排序。
-SELECT cat_id,
-GROUP_CONCAT(CONCAT_WS('-----', goods_name, shop_price, click_count) ORDER BY shop_price DESC) AS named,
-MAX(shop_price) AS max_price,
-AVG (shop_price) AS avarage_price FROM im_goods
+#满足价格在1000以上，点击数大于10的条件下，根据价格排序，根据分类id分组，并且组合记录字段，里面再次根据价格排序。
+SELECT
+  cat_id,
+  GROUP_CONCAT(CONCAT_WS('-----', goods_name, shop_price, click_count) ORDER BY shop_price DESC) AS named,
+  MAX(shop_price)                                                                                AS max_price,
+  AVG(shop_price)                                                                                AS avarage_price
+FROM im_goods
 WHERE shop_price > 1000 AND click_count > 10 AND goods_name LIKE "诺基亚%"
 GROUP BY cat_id
-ORDER BY shop_price DESC ;
+ORDER BY shop_price DESC;
 
-SELECT goods_id, cat_id, goods_name, shop_price FROM im_goods WHERE cat_id NOT IN (3,10) ORDER BY shop_price desc;
+SELECT
+  goods_id,
+  cat_id,
+  goods_name,
+  shop_price
+FROM im_goods
+WHERE cat_id NOT IN (3, 10)
+ORDER BY shop_price DESC;
 
-SELECT goods_id, cat_id, goods_name, shop_price FROM im_goods WHERE (shop_price > 1000 AND shop_price < 3000) OR (shop_price > 4000 AND shop_price < 5000);
-SELECT goods_id, cat_id, goods_name, shop_price FROM im_goods WHERE (shop_price BETWEEN 1000 AND  3000) OR (shop_price BETWEEN 4000 AND 5000);
+SELECT
+  goods_id,
+  cat_id,
+  goods_name,
+  shop_price
+FROM im_goods
+WHERE (shop_price > 1000 AND shop_price < 3000) OR (shop_price > 4000 AND shop_price < 5000);
+SELECT
+  goods_id,
+  cat_id,
+  goods_name,
+  shop_price
+FROM im_goods
+WHERE (shop_price BETWEEN 1000 AND 3000) OR (shop_price BETWEEN 4000 AND 5000);
 
-//把诺基亚开头商品名字替换成HTC
-SELECT CONCAT('HTC', SUBSTRING(goods_name, 4)) FROM im_goods WHERE goods_name LIKE "诺基亚%";
+#把诺基亚开头商品名字替换成HTC
+SELECT CONCAT('HTC', SUBSTRING(goods_name, 4))
+FROM im_goods
+WHERE goods_name LIKE "诺基亚%";
 
-//把商品价格保留与价格最近10位的数字，如115修改成110，3584改成3580
-SELECT goods_name, shop_price, FLOOR(shop_price/10)*10 AS price FROM im_goods;
+#把商品价格保留与价格最近10位的数字，如115修改成110，3584改成3580
+SELECT
+  goods_name,
+  shop_price,
+  FLOOR(shop_price / 10) * 10 AS price
+FROM im_goods;
 
-//统计所有分类下的商品的总价格
-SELECT cat_id, AVG(shop_price) AS avarage_price , SUM(goods_number) AS total_num, MAX(shop_price) AS max_price, MIN(shop_price) AS min_price, SUM(shop_price*goods_number) AS total_price FROM im_goods GROUP BY cat_id ORDER BY cat_id;
+#统计所有分类下的商品的总价格
+SELECT
+  cat_id,
+  AVG(shop_price)                AS avarage_price,
+  SUM(goods_number)              AS total_num,
+  MAX(shop_price)                AS max_price,
+  MIN(shop_price)                AS min_price,
+  SUM(shop_price * goods_number) AS total_price
+FROM im_goods
+GROUP BY cat_id
+ORDER BY cat_id;
 
-///售价比市场价省200以上的(HAVING 和 WHERE 区别)
-//HAVING 是针对计算出来的结果集的基础上再做操作，WHERE 是针对数据表里面的字段进行操作
-SELECT goods_id, shop_price, market_price, (market_price - shop_price) AS sheng from im_goods HAVING sheng > 200;
+#/售价比市场价省200以上的( HAVING 和 WHERE 区别)
+# HAVING 是针对计算出来的结果集的基础上再做操作， WHERE 是针对数据表里面的字段进行操作
+SELECT
+  goods_id,
+  shop_price,
+  market_price,
+  (market_price - shop_price) AS sheng
+FROM im_goods
+HAVING sheng > 200;
 
-//子查询,取出每个分类最新商品（用order by 更耗资源）
-select cat_id, goods_id, goods_name from im_goods where goods_id in (select MAX(goods_id) from im_goods GROUP BY cat_id)
-SELECT * from (SELECT goods_id, goods_name, cat_id from im_goods order by goods_id DESC) as t GROUP BY cat_id
-
+#子查询, 取出每个分类最新商品（用order BY 更耗资源）
+SELECT
+  cat_id,
+  goods_id,
+  goods_name
+FROM im_goods
+WHERE goods_id IN (SELECT MAX(goods_id)
+                   FROM im_goods
+                   GROUP BY cat_id)
+SELECT *
+FROM (SELECT
+        goods_id,
+        goods_name,
+        cat_id
+      FROM im_goods
+      ORDER BY goods_id DESC) AS t
+GROUP BY cat_id
 
 
 DROP TABLE IF EXISTS `im_result`;
 CREATE TABLE `im_result` (
-  `name` varchar(20) DEFAULT NULL,
-  `subject` varchar(20) DEFAULT NULL,
-  `score` tinyint(4) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `name`    VARCHAR(20) DEFAULT NULL,
+  `subject` VARCHAR(20) DEFAULT NULL,
+  `score`   TINYINT(4)  DEFAULT NULL
+)
+  ENGINE = MyISAM
+  DEFAULT CHARSET = utf8;
 
 -- ----------------------------
 -- Records of im_result
@@ -133,8 +227,14 @@ INSERT INTO `im_result` VALUES ('赵六', '语文', '78');
 INSERT INTO `im_result` VALUES ('赵六', '数学', '50');
 INSERT INTO `im_result` VALUES ('赵六', '英语', '40');
 
-//sum 和 count 的区别： 计算有2门以上不及格的学生的不及格次数和平均分
-SELECT name, SUM(score < 60) AS score_num, AVG(score) AS avg_score FROM im_result GROUP BY name HAVING score_num >= 2;
+#sum 和 COUNT 的区别： 计算有2门以上不及格的学生的不及格次数和平均分
+SELECT
+  name,
+  SUM(score < 60) AS score_num,
+  AVG(score)      AS avg_score
+FROM im_result
+GROUP BY name
+HAVING score_num >= 2;
 
 
 
