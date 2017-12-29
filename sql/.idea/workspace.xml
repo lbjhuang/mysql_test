@@ -23,7 +23,23 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <expand />
+    <expand>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="test@localhost" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="test@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="test" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="test@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="test" type="e3449647:DbNodeDescriptor" />
+        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FavoritesManager">
@@ -34,18 +50,67 @@
       <file leaf-file-name="procedure.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/procedure.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+            <state relative-caret-position="361">
+              <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sql_test2.sql" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sql_test2.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sql_test2.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+            <state relative-caret-position="130">
+              <caret line="7" column="28" lean-forward="false" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="select.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/select.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="895">
+              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="account" pinned="false" current-in-tab="false">
+        <entry file="das://table:/1ef75347/b197c075-1c7d-4565-a554-f2075a555a64/test.account">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="beifen.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/beifen.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="trigger.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/trigger.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="438">
+              <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -71,6 +136,11 @@
         <option value="$PROJECT_DIR$/huancun.sql" />
         <option value="$PROJECT_DIR$/sql_test.sql" />
         <option value="$PROJECT_DIR$/sql_test2.sql" />
+        <option value="$PROJECT_DIR$/view.sql" />
+        <option value="$PROJECT_DIR$/suoyin.sql" />
+        <option value="$PROJECT_DIR$/transaction.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b197c075-1c7d-4565-a554-f2075a555a64/console.sql" />
+        <option value="$PROJECT_DIR$/trigger.sql" />
       </list>
     </option>
   </component>
@@ -81,11 +151,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="192" />
-    <option name="y" value="462" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-149" />
+    <option name="y" value="430" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -102,6 +172,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -113,13 +185,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -169,6 +240,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="addaf827-e880-4c0e-af00-ae92ddf1110d" name="默认的" comment="" />
@@ -178,20 +252,36 @@
       <updated>1488266003215</updated>
       <workItem from="1513655659372" duration="678000" />
       <workItem from="1513911080315" duration="3450000" />
+      <workItem from="1514167253313" duration="2484000" />
+      <workItem from="1514169766255" duration="1441000" />
+      <workItem from="1514182217478" duration="938000" />
+      <workItem from="1514250807074" duration="1196000" />
+      <workItem from="1514268185216" duration="599000" />
+      <workItem from="1514336861399" duration="7075000" />
+      <workItem from="1514531649441" duration="2387000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4128000" />
+    <option name="totallyTimeSpent" value="20248000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07942431" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10554371" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12473348" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -204,11 +294,41 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="更改" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42666668" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="更改" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42666668" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.104477614" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -229,6 +349,82 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/select.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/suoyin.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql_test.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3667">
+          <caret line="193" column="35" lean-forward="true" selection-start-line="193" selection-start-column="35" selection-end-line="193" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/procedure.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql_test2.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/procedure.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql_test2.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="20" lean-forward="false" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/procedure.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql_test2.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/procedure.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -241,7 +437,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -249,7 +444,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -257,56 +451,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2584">
           <caret line="136" column="41" lean-forward="false" selection-start-line="136" selection-start-column="32" selection-end-line="136" selection-end-column="41" />
-          <folding>
-            <marker date="1513911367005" expanded="true" signature="0:380" ph="CREATE TABLE... im_category" />
-            <marker date="1513911367005" expanded="true" signature="473:536" ph="INSERT INTO `im_category`... " />
-            <marker date="1513911367005" expanded="true" signature="538:601" ph="INSERT INTO `im_category`... " />
-            <marker date="1513911367005" expanded="true" signature="603:666" ph="INSERT INTO `im_category`... " />
-            <marker date="1513911367005" expanded="true" signature="668:731" ph="INSERT INTO `im_category`... " />
-            <marker date="1513911367005" expanded="true" signature="733:796" ph="INSERT INTO `im_category`... " />
-            <marker date="1513911367005" expanded="true" signature="798:861" ph="INSERT INTO `im_category`... " />
-            <marker date="1513911367005" expanded="true" signature="863:926" ph="INSERT INTO `im_category`... " />
-            <marker date="1513911367005" expanded="true" signature="928:991" ph="INSERT INTO `im_category`... " />
-            <marker date="1513911367005" expanded="true" signature="993:1057" ph="INSERT INTO `im_category`... " />
-            <marker date="1513911367005" expanded="true" signature="1112:1337" ph="SELECT COUNT... im_category" />
-            <marker date="1513911367005" expanded="true" signature="1341:2034" ph="CREATE TABLE... im_goods" />
-            <marker date="1513911367005" expanded="true" signature="2124:2223" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="2225:2327" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="2329:2431" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="2433:2534" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="2536:2640" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="2642:2753" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="2755:2855" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="2857:2958" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="2960:3063" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="3065:3164" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="3166:3269" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="3271:3386" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="3388:3492" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="3494:3595" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="3597:3699" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="3701:3800" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="3802:3901" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="3903:4008" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="4010:4111" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="4113:4216" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="4218:4325" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="4327:4429" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="4431:4533" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="4535:4639" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="4641:4745" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="4747:4849" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="4851:4951" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="4953:5053" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="5055:5155" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="5157:5259" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="5261:5362" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="5365:5517" ph="SELECT goods... im_goods" />
-            <marker date="1513911367005" expanded="true" signature="5519:5665" ph="SELECT goods... im_goods" />
-            <marker date="1513911367005" expanded="true" signature="5667:5806" ph="SELECT goods... im_goods" />
-            <marker date="1513911367005" expanded="true" signature="5808:5946" ph="SELECT goods... im_goods" />
-            <marker date="1513911367005" expanded="true" signature="9013:9141" ph="SELECT name,... im_result" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -343,7 +487,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -351,7 +494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -395,7 +537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -403,7 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -449,10 +589,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/beifen.sql">
+    <entry file="file://$PROJECT_DIR$/select2.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="95">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql_test.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3667">
+          <caret line="193" column="35" lean-forward="true" selection-start-line="193" selection-start-column="35" selection-end-line="193" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/1ef75347/b197c075-1c7d-4565-a554-f2075a555a64/test.im_admin">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/1ef75347/b197c075-1c7d-4565-a554-f2075a555a64/test.im_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/1ef75347/b197c075-1c7d-4565-a554-f2075a555a64/test.students">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/suoyin.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/transaction.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="15" column="23" lean-forward="true" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -463,105 +645,78 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/select2.sql">
+    <entry file="file://$PROJECT_DIR$/fuc.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/select.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+    <entry file="das://table:/1ef75347/b197c075-1c7d-4565-a554-f2075a555a64/test.im_order">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view.sql">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b197c075-1c7d-4565-a554-f2075a555a64/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/suoyin.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql_test.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3667">
-          <caret line="193" column="35" lean-forward="true" selection-start-line="193" selection-start-column="35" selection-end-line="193" selection-end-column="35" />
-          <folding>
-            <marker date="1513911367005" expanded="true" signature="0:380" ph="CREATE TABLE... im_category" />
-            <marker date="1513911367005" expanded="true" signature="473:536" ph="INSERT INTO `im_category`... " />
-            <marker date="1513911367005" expanded="true" signature="538:601" ph="INSERT INTO `im_category`... " />
-            <marker date="1513911367005" expanded="true" signature="603:666" ph="INSERT INTO `im_category`... " />
-            <marker date="1513911367005" expanded="true" signature="668:731" ph="INSERT INTO `im_category`... " />
-            <marker date="1513911367005" expanded="true" signature="733:796" ph="INSERT INTO `im_category`... " />
-            <marker date="1513911367005" expanded="true" signature="798:861" ph="INSERT INTO `im_category`... " />
-            <marker date="1513911367005" expanded="true" signature="863:926" ph="INSERT INTO `im_category`... " />
-            <marker date="1513911367005" expanded="true" signature="928:991" ph="INSERT INTO `im_category`... " />
-            <marker date="1513911367005" expanded="true" signature="993:1057" ph="INSERT INTO `im_category`... " />
-            <marker date="1513911367005" expanded="true" signature="1112:1337" ph="SELECT COUNT... im_category" />
-            <marker date="1513911367005" expanded="true" signature="1341:2034" ph="CREATE TABLE... im_goods" />
-            <marker date="1513911367005" expanded="true" signature="2124:2223" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="2225:2327" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="2329:2431" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="2433:2534" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="2536:2640" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="2642:2753" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="2755:2855" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="2857:2958" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="2960:3063" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="3065:3164" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="3166:3269" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="3271:3386" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="3388:3492" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="3494:3595" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="3597:3699" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="3701:3800" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="3802:3901" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="3903:4008" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="4010:4111" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="4113:4216" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="4218:4325" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="4327:4429" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="4431:4533" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="4535:4639" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="4641:4745" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="4747:4849" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="4851:4951" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="4953:5053" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="5055:5155" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="5157:5259" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="5261:5362" ph="INSERT INTO `im_goods`... " />
-            <marker date="1513911367005" expanded="true" signature="5365:5517" ph="SELECT goods... im_goods" />
-            <marker date="1513911367005" expanded="true" signature="5519:5665" ph="SELECT goods... im_goods" />
-            <marker date="1513911367005" expanded="true" signature="5667:5806" ph="SELECT goods... im_goods" />
-            <marker date="1513911367005" expanded="true" signature="5808:5946" ph="SELECT goods... im_goods" />
-            <marker date="1513911367005" expanded="true" signature="9013:9141" ph="SELECT name,... im_result" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/procedure.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        <state relative-caret-position="361">
+          <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/select.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="895">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sql_test2.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="20" lean-forward="true" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        <state relative-caret-position="130">
+          <caret line="7" column="28" lean-forward="false" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/1ef75347/b197c075-1c7d-4565-a554-f2075a555a64/test.account">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/beifen.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trigger.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
           <folding />
         </state>
       </provider>
