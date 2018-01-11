@@ -41,3 +41,6 @@ CREATE TRIGGER t2
     END IF;
     UPDATE im_goods SET goods_number = goods_number - NEW.goods_number WHERE goods_id = NEW.goods_id;
   END $
+DELIMITER $
+
+

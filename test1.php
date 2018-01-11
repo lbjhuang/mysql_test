@@ -64,7 +64,7 @@
 //echo similar_text('珠海',$city_txt )   //计算两个字符串的相似度，返回相同字符串的个数
 //
 //
-
+echo date('ymd', time()).substr(100+87,1);
 phpinfo()
 
 ?>
