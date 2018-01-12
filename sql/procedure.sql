@@ -73,7 +73,7 @@ CREATE PROCEDURE pr4(IN n INT)
     SELECT total;
   END $$
 
-/*out 输出*/
+/*6 out 输出*/
 DELIMITER $$
 CREATE PROCEDURE pr5(IN n INT, OUT total INT)
   BEGIN
@@ -89,7 +89,7 @@ CREATE PROCEDURE pr5(IN n INT, OUT total INT)
 CALL pr5(100, @total);   /*输出total*/
 SELECT @total;  /*打印total*/
 
-/*inout 输入输出*/
+/*7 inout 输入输出*/
 DELIMITER $$
 CREATE PROCEDURE pr6(INOUT age INT)
   BEGIN
@@ -99,3 +99,64 @@ CREATE PROCEDURE pr6(INOUT age INT)
 SET @age= 20;  /*先设置age的值*/
 CALL pr5(@age);   /*调用过程，输入输出age*/
 SELECT @age;  /*打印age*/
+
+
+/*8 case 分支*/
+DELIMITER $$
+CREATE PROCEDURE pr7()
+  BEGIN
+    DECLARE pos INT DEFAULT 0;
+    SET pos := floor(5*rand());    /*rand()产生0-1随机数*/
+    CASE pos
+      WHEN 1 THEN SELECT 'fall in the sea';
+      WHEN 2 THEN SELECT 'fall in the hill';
+      ELSE SELECT 'I do not know';
+    END CASE;
+  END $$
+
+
+/*9 游标*/
+/*游标实际上是一种能从包括多条数据记录的结果集中每次提取一条记录的机制。
+    游标充当指针的作用。
+    尽管游标能遍历结果中的所有行，但他一次只指向一行，权限定位到一行记录而不是整个结果集。
+    游标的作用就是用于对查询数据库所返回的记录进行遍历，以便进行相应的操作。*/
+DELIMITER $$
+CREATE PROCEDURE pr8()
+  BEGIN
+    DECLARE row_goods_id INT;
+    DECLARE row_number INT;
+    DECLARE row_goods_name VARCHAR(20);
+    DECLARE get_goods CURSOR FOR SELECT goods_id, goods_number, goods_name FROM im_goods;    /*声明一个游标*/
+
+    OPEN get_goods;    /*打开一个游标*/
+    FETCH get_goods INTO row_goods_id, row_number, row_goods_name;  /*fetch 取值*/
+    SELECT concat(row_goods_id,':',row_goods_name,':',row_number);  /*打印赋值好的变量*/
+    CLOSE get_goods;   /*关闭游标*/
+
+  END $$
+
+
+/*10 循环游标*/
+DELIMITER $$
+CREATE PROCEDURE pr9()
+  BEGIN
+    DECLARE row_goods_id INT;
+    DECLARE row_number INT;
+    DECLARE row_goods_name VARCHAR(20) CHARACTER SET utf8;  /*存储过程中变量声明中，如果有中文，先声明变量字符集，否则命令行输出的时候可能出现汉字变成??*/
+    DECLARE summary INT DEFAULT 0;
+    DECLARE i INT DEFAULT 1;
+
+    DECLARE get_goods CURSOR FOR SELECT goods_id, goods_number, goods_name FROM im_goods;    /*声明一个游标*/
+    SELECT count(*)  INTO summary FROM im_goods;     /*统计总行数放在summary里面*/
+
+    OPEN get_goods;    /*打开游标*/
+    REPEAT             /*repeat循环打印每行记录*/
+      SET i := i+1;
+      FETCH get_goods INTO row_goods_id, row_number, row_goods_name;  /*fetch 取值*/
+      SELECT concat(row_goods_id,':',row_goods_name,':',row_number);  /*打印赋值好的变量的连接字符串*/
+    UNTIL i >= summary END REPEAT;
+    CLOSE get_goods;   /*关闭游标*/
+
+  END $$
+
+
